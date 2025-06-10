@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(241, 239, 236);
+  color: rgb(78, 74, 74);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+  margin-top: 100px;
+  font-size: 2.5rem;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.start {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+.par{
+  margin-top: 20px;
+  margin-bottom: 0;
+  text-align: center;
+}
+#back-btn{
+  margin-top: -20px;
+}
+#start-btn, #back-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#start-btn:hover, #back-btn:hover, .option-btn:hover, #play-again:hover,#back-home:hover{
+  transform: scale(1.05);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+button{
+  border: none;
+  cursor: pointer;
+}
+#popup-content {
+  font-size: 100px;
+  color: white;
+  font-weight: bold;
+  animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+.header{
+  margin: 10px 30px;
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#score{
+  font-weight: bolder;
+}
+
+#duration {
+  top: 20px;
+  right: 20px;
+  background-color: rgb(241, 239, 236);
+  color: rgb(78, 74, 74);
+  border: 1px solid gray;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+#question{
+  font-size: 40px;
+  font-weight: bold;
+}
+.option-btn{
+  width: 70px ;
+  height: 40px;
+  border: 2px solid gray;
+  background-color: rgb(241, 239, 236);
+  margin: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(78, 74, 74);
+}
+.option-btn:hover{
+  cursor: pointer;
+  background-color: whitesmoke;
+
+}
+#play-again .info,
+#back-home .info{
+  opacity: 0;
+  margin-top: 0px;
+}
+#play-again:hover .info,
+#back-home:hover .info{
+  opacity: 1;
+}
+#review{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#review {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 30px;
+}
+@media (max-width: 1024px) {
+  #review {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  #review {
+    grid-template-columns:1fr 1fr ;
+  }
+}
+
+@media (max-width: 500px) {
+  #review {
+    grid-template-columns: 1fr;
+  }
+}
+.review-block {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 18px;
+}
+.review-block div:first-child {
+  font-size: 25px;
+  font-weight: 500;
+}
